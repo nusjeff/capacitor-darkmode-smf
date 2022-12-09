@@ -1,1 +1,1 @@
-{"version":3,"file":"definitions.js","sourceRoot":"","sources":["../../src/definitions.ts"],"names":[],"mappings":""}
+{"version":3,"file":"definitions.js","sourceRoot":"","sources":["../../src/definitions.ts"],"names":[],"mappings":"","sourcesContent":["import { PluginListenerHandle } from \"@capacitor/core\";\n\nexport interface DarkModePlugin {\n  isDarkModeOn(): Promise<any>;\n  addListener(\n    eventName: 'darkModeStateChanged',\n    listenerFunc: (state: any) => void,\n  ): PluginListenerHandle;\n  registerDarkModeChangeListener():void;\n}\n"]}
