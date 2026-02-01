@@ -1,10 +1,7 @@
 import { WebPlugin } from '@capacitor/core';
 export class DarkModeWeb extends WebPlugin {
     constructor() {
-        super({
-            name: 'DarkMode',
-            platforms: ['web', 'android', 'ios'],
-        });
+        super();
         this.darkMode = { "isDarkModeOn": false };
     }
     isDarkModeOn() {
@@ -29,6 +26,4 @@ export class DarkModeWeb extends WebPlugin {
 }
 const DarkMode = new DarkModeWeb();
 export { DarkMode };
-import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(DarkMode);
 //# sourceMappingURL=web.js.map

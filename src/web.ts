@@ -5,10 +5,7 @@ export class DarkModeWeb extends WebPlugin implements DarkModePlugin {
   darkMode = {"isDarkModeOn":false}
 
   constructor() {
-    super({
-      name: 'DarkMode',
-      platforms: ['web','android','ios'],
-    });
+    super();
   }
 
   isDarkModeOn(): Promise<any> {
@@ -40,6 +37,3 @@ export class DarkModeWeb extends WebPlugin implements DarkModePlugin {
 const DarkMode = new DarkModeWeb();
 
 export { DarkMode };
-
-import { registerWebPlugin } from '@capacitor/core';
-registerWebPlugin(DarkMode);
