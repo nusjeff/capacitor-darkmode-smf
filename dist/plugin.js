@@ -1,16 +1,13 @@
 var capacitorApp = (function (exports, core) {
     'use strict';
 
-    const DarkMode$1 = core.registerPlugin('App', {
+    const DarkMode$1 = core.registerPlugin('DarkMode', {
         web: () => Promise.resolve().then(function () { return web; }).then(m => new m.DarkModeWeb()),
     });
 
     class DarkModeWeb extends core.WebPlugin {
         constructor() {
-            super({
-                name: 'DarkMode',
-                platforms: ['web', 'android', 'ios'],
-            });
+            super();
             this.darkMode = { "isDarkModeOn": false };
         }
         isDarkModeOn() {
@@ -34,7 +31,6 @@ var capacitorApp = (function (exports, core) {
         }
     }
     const DarkMode = new DarkModeWeb();
-    core.registerWebPlugin(DarkMode);
 
     var web = /*#__PURE__*/Object.freeze({
         __proto__: null,

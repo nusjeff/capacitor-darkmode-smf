@@ -1,7 +1,7 @@
 import { registerPlugin } from '@capacitor/core';
 import type { DarkModePlugin } from './definitions';
 
-const DarkMode = registerPlugin<DarkModePlugin>('App', {
+const DarkMode = registerPlugin<DarkModePlugin>('DarkMode', {
   web: () => import('./web').then(m => new m.DarkModeWeb()),
 });
 

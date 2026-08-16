@@ -1,6 +1,6 @@
 import { PluginListenerHandle } from "@capacitor/core";
 export interface DarkModePlugin {
     isDarkModeOn(): Promise<any>;
-    addListener(eventName: 'darkModeStateChanged', listenerFunc: (state: any) => void): PluginListenerHandle;
+    addListener(eventName: 'darkModeStateChanged', listenerFunc: (state: any) => void): Promise<PluginListenerHandle>;
     registerDarkModeChangeListener(): void;
 }
